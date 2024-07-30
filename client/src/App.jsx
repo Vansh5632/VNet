@@ -1,9 +1,10 @@
 import React from 'react'
+import SignUp from './Pages/SignUp'
 
 const App = () => {
   return (
-    <div className='text-blue-500'>
-      hello
+    <div>
+      <SignUp/>
     </div>
   )
 }
