@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const SignUp = () => {
+const SignUp = ({ onSignUp }) => {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -12,9 +12,10 @@ const SignUp = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const onSubmit = async (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
     console.log('Submitting form data', formData);
+    onSignUp(); // Trigger the sign-up action
   };
 
   return (
@@ -80,6 +81,7 @@ const SignUp = () => {
             >
               Let's Begin
             </button>
+            <h1 className='mt-2'>Already have an account? <a href="/signin" className='text-blue-500'>Sign In</a></h1>
           </form>
         </div>
       </div>
