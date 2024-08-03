@@ -1,0 +1,49 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "question": "Spill the tea on your digital life! If your screen time could talk, what would it say you're addicted to?",
+        "options": [
+          "Scrolling through the 'Gram like it's your job",
+          "Binge-watching shows until your eyes glaze over",
+          "Getting lost in virtual worlds and pwning n00bs",
+          "Vibing to tunes that make your soul dance",
+          "Riding the wave of viral vids and spicy memes"
+        ]
+      },
+      {
+        "id": 2,
+        "question": "Weekend mood: how do you recharge your batteries when adulting takes a backseat?",
+        "options": [
+          "Squad goals: linking up with the homies for epic adventures",
+          "Hermit mode: nestling in your cocoon of comfy vibes",
+          "Wanderlust warrior: chasing new horizons and Insta-worthy moments",
+          "Creative beast: unleashing your inner artist on passion projects",
+          "Couch commander: conquering digital realms from your fortress of solitude"
+        ]
+      },
+      {
+        "id": 3,
+        "question": "Your brain's jukebox is stuck on repeat. What's the soundtrack of your life right now?",
+        "options": [
+          "Pop bangers that make you move without even trying",
+          "Rock anthems that fuel your rebel soul",
+          "Hip-hop flows that speak your truth",
+          "EDM beats that transform you into a dance floor deity",
+          "Indie tunes that make you feel effortlessly cool"
+        ]
+      },
+      {
+        "id": 4,
+        "question": "You're the star of your own movie. What genre is your life story serving today?",
+        "options": [
+          "Action-packed thrill ride with explosive plot twists",
+          "Laugh-out-loud comedy where you're the lovable mess",
+          "Deep drama exploring the human condition (aka your feelings)",
+          "Swoon-worthy romance with a dash of will-they-won't-they",
+          "Mind-bending sci-fi that questions reality itself"
+        ]
+      }
+    ]
+  }
+  
