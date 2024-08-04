@@ -8,6 +8,7 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const cookieParser = require('cookie-parser');
 const router = require('./routes/authentication');
+const questionRoute = require('./routes/questionPostandGet');
 
 const corsOptions = {
     origin:'http://localhost:5173',
@@ -19,7 +20,8 @@ const corsOptions = {
 app.use(express.json());
 app.use(cors(corsOptions));
 app.use(cookieParser());
-app.use('/',router);
+app.use('/api/auth',router);
+app.use('/api/questions',questionRoute);
 
 connectDB();
 const PORT = process.env.PORT||5000;
