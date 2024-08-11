@@ -6,6 +6,7 @@ import SignUp from './Pages/SignUp';
 import SignIn from './Pages/SignIn';
 import Question from './Pages/Question';
 import { signUp } from './store/authSlice';
+import HomePage from './Pages/HomePage';
 
 const AppRoutes = () => {
   const isSignedUp = useSelector((state) => state.auth.isSignedUp);
@@ -22,6 +23,7 @@ const AppRoutes = () => {
         <Route path="/signup" element={isSignedUp ? <Navigate to="/question" /> : <SignUp onSignUp={handleSignUp} />} />
         <Route path="/signin" element={isSignedUp ? <Navigate to="/question" /> : <SignIn />} />
         <Route path="/question" element={isSignedUp ? <Question /> : <Navigate to="/signup" />} />
+        <Route path='/home' element={<HomePage/>}></Route>
       </Routes>
     </Router>
   );
