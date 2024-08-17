@@ -8,7 +8,7 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const cookieParser = require('cookie-parser');
 const router = require('./routes/authentication');
-const questionRoute = require('./routes/questionPostandGet');
+const questionRoute = require('./routes/questionPandG');
 
 const corsOptions = {
     origin:'http://localhost:5173',

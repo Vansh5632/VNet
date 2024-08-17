@@ -40,7 +40,7 @@ router.post('/signup', async (req, res) => {
             { expiresIn: '7d' },
             (err, token) => {
                 if (err) throw err;
-                res.cookie('token', token, { httpOnly: true, sameSite: 'strict', maxAge: 7 * 24 * 60 * 60 * 1000 }); // 7 days
+                res.cookie('token', token, { httpOnly: true, sameSite: 'strict', maxAge: 7 * 24 * 60 * 60 * 1000 }); 
                 res.status(201).json({ token });
             }
         );
@@ -77,7 +77,7 @@ router.post('/signin', async (req, res) => {
             { expiresIn: '7d' },
             (err, token) => {
                 if (err) throw err;
-                res.cookie('token', token, { httpOnly: true, sameSite: 'strict', maxAge: 7 * 24 * 60 * 60 * 1000 }); // 7 days
+                res.cookie('token', token, { httpOnly: true, sameSite: 'strict', maxAge: 7 * 24 * 60 * 60 * 1000 }); 
                 res.json({ token });
             }
         );
