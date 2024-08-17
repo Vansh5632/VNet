@@ -1,0 +1,34 @@
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <defs>
+        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#4ECDC4;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#45B7D1;stop-opacity:1" />
+        </linearGradient>
+        <radialGradient id="radGrad" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:white;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#45B7D1;stop-opacity:1" />
+        </radialGradient>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+            <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Reduced Size V Shape -->
+    <path d="M40 40 L100 160 L160 40" 
+          stroke="url(#grad)" stroke-width="10" fill="none" stroke-linecap="round" 
+          filter="url(#glow)" />
+
+    <!-- Interlocked Circle with Radial Gradient -->
+    <circle cx="100" cy="100" r="30" fill="url(#radGrad)" filter="url(#glow)" />
+    
+    <!-- Inner Glow and Symbolism Circle -->
+    <circle cx="100" cy="100" r="15" fill="url(#grad)" />
+    
+    <!-- Small Circle for Focused Detail -->
+    <circle cx="100" cy="100" r="5" fill="#FFFFFF" />
+</svg>

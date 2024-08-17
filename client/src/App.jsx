@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Provider, useSelector, useDispatch } from 'react-redux';
 import store from './store/store';
@@ -7,6 +7,7 @@ import SignIn from './Pages/SignIn';
 import Question from './Pages/Question';
 import { signUp } from './store/authSlice';
 import HomePage from './Pages/HomePage';
+import BouncingDotLoader from './components/BouncingDotLoader';
 
 const AppRoutes = () => {
   const isSignedUp = useSelector((state) => state.auth.isSignedUp);
@@ -30,9 +31,15 @@ const AppRoutes = () => {
 };
 
 const App = () => {
+  const [loading,setLoading] = useState(true);
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false);
+    },3000);
+  },[])
   return (
     <Provider store={store}>
-      <AppRoutes />
+      {loading?<BouncingDotLoader/>:<AppRoutes/>}
     </Provider>
   );
 };
