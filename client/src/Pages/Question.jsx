@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";  // Import useNavigate
 import questionData from "../data/questionData.json";
 
 const questions = questionData.questions;
@@ -7,6 +8,7 @@ const Question = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [quizCompleted, setQuizCompleted] = useState(false);
+  const navigate = useNavigate();  // Initialize useNavigate
 
   const handleOptionSelect = (option) => {
     setSelectedAnswers({
@@ -43,6 +45,7 @@ const Question = () => {
     } else {
       setQuizCompleted(true);
       handleSubmit();
+      navigate('/home');  // Redirect to homepage after quiz completion
     }
   };
 

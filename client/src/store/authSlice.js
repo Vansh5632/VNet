@@ -1,18 +1,21 @@
-// store/authSlice.js
+import {createSlice} from '@reduxjs/toolkit';
 
-import { createSlice } from '@reduxjs/toolkit';
+const initialState = {
+  isAuthenticated: false,
+};
 
 const authSlice = createSlice({
-  name: 'auth',
-  initialState: {
-    isSignedUp: false, // Ensure initial state is false
-  },
-  reducers: {
-    signUp(state) {
-      state.isSignedUp = true;
+  name:'auth',
+  initialState,
+  reducers:{
+    login:(state)=>{
+      state.isAuthenticated = true;
     },
-  },
+    logout:(state)=>{
+      state.isAuthenticated = false;
+    }
+  }
 });
 
-export const { signUp } = authSlice.actions;
+export const {login,logout} = authSlice.actions;
 export default authSlice.reducer;

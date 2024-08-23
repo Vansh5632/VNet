@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 
-const SignUp = ({ onSignUp }) => {
+const SignUp = ({ onSignUp }) => {  // Receive the onSignUp prop from AppRoutes
   const [formData, setFormData] = useState({
     username: '',
     email: '',
     password: '',
   });
   const { username, email, password } = formData;
+
+  const navigate = useNavigate();
 
   const onChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -15,7 +18,11 @@ const SignUp = ({ onSignUp }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     console.log('Submitting form data', formData);
-    onSignUp(); // Trigger the sign-up action
+
+    onSignUp(formData); // Authenticate and update auth state
+
+    // Redirect to Question page after signup
+    navigate('/question');
   };
 
   return (
@@ -81,7 +88,7 @@ const SignUp = ({ onSignUp }) => {
             >
               Let's Begin
             </button>
-            <h1 className='mt-2'>Already have an account? <a href="/signin" className='text-blue-500'>Sign In</a></h1>
+            <h1 className='mt-2'>Already have an account? <Link to="/signin" className='text-blue-500'>Sign In</Link></h1>
           </form>
         </div>
       </div>

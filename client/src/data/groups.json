@@ -1,0 +1,79 @@
+{
+    "groups": [
+      {
+        "title": "Midnight Readers",
+        "mood": "Contemplative",
+        "mainInterest": "Literature"
+      },
+      {
+        "title": "Adrenaline Junkies",
+        "mood": "Excited",
+        "mainInterest": "Extreme Sports"
+      },
+      {
+        "title": "Green Thumbs",
+        "mood": "Peaceful",
+        "mainInterest": "Gardening"
+      },
+      {
+        "title": "Code Wizards",
+        "mood": "Focused",
+        "mainInterest": "Programming"
+      },
+      {
+        "title": "Wanderlust Explorers",
+        "mood": "Adventurous",
+        "mainInterest": "Travel"
+      },
+      {
+        "title": "Zen Masters",
+        "mood": "Calm",
+        "mainInterest": "Meditation"
+      },
+      {
+        "title": "Foodie Fanatics",
+        "mood": "Enthusiastic",
+        "mainInterest": "Cooking"
+      },
+      {
+        "title": "Night Owls",
+        "mood": "Creative",
+        "mainInterest": "Art"
+      },
+      {
+        "title": "Rhythm Nation",
+        "mood": "Energetic",
+        "mainInterest": "Dance"
+      },
+      {
+        "title": "Eco Warriors",
+        "mood": "Determined",
+        "mainInterest": "Environmental Activism"
+      },
+      {
+        "title": "Stargazers",
+        "mood": "Curious",
+        "mainInterest": "Astronomy"
+      },
+      {
+        "title": "Shutter Bugs",
+        "mood": "Observant",
+        "mainInterest": "Photography"
+      },
+      {
+        "title": "Vinyl Vibe",
+        "mood": "Nostalgic",
+        "mainInterest": "Vintage Music"
+      },
+      {
+        "title": "Tech Titans",
+        "mood": "Innovative",
+        "mainInterest": "Technology"
+      },
+      {
+        "title": "History Buffs",
+        "mood": "Inquisitive",
+        "mainInterest": "Ancient Civilizations"
+      }
+    ]
+  }
