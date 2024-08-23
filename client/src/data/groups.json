@@ -3,77 +3,93 @@
       {
         "title": "Midnight Readers",
         "mood": "Contemplative",
-        "mainInterest": "Literature"
+        "mainInterest": "Literature",
+        "imageUrl": "https://via.placeholder.com/300x200?text=Midnight+Readers"
       },
       {
         "title": "Adrenaline Junkies",
         "mood": "Excited",
-        "mainInterest": "Extreme Sports"
+        "mainInterest": "Extreme Sports",
+        "imageUrl": "https://via.placeholder.com/300x200?text=Adrenaline+Junkies"
       },
       {
         "title": "Green Thumbs",
         "mood": "Peaceful",
-        "mainInterest": "Gardening"
+        "mainInterest": "Gardening",
+        "imageUrl": "https://via.placeholder.com/300x200?text=Green+Thumbs"
       },
       {
         "title": "Code Wizards",
         "mood": "Focused",
-        "mainInterest": "Programming"
+        "mainInterest": "Programming",
+        "imageUrl": "https://via.placeholder.com/300x200?text=Code+Wizards"
       },
       {
         "title": "Wanderlust Explorers",
         "mood": "Adventurous",
-        "mainInterest": "Travel"
+        "mainInterest": "Travel",
+        "imageUrl": "https://via.placeholder.com/300x200?text=Wanderlust+Explorers"
       },
       {
         "title": "Zen Masters",
         "mood": "Calm",
-        "mainInterest": "Meditation"
+        "mainInterest": "Meditation",
+        "imageUrl": "https://via.placeholder.com/300x200?text=Zen+Masters"
       },
       {
         "title": "Foodie Fanatics",
         "mood": "Enthusiastic",
-        "mainInterest": "Cooking"
+        "mainInterest": "Cooking",
+        "imageUrl": "https://via.placeholder.com/300x200?text=Foodie+Fanatics"
       },
       {
         "title": "Night Owls",
         "mood": "Creative",
-        "mainInterest": "Art"
+        "mainInterest": "Art",
+        "imageUrl": "https://via.placeholder.com/300x200?text=Night+Owls"
       },
       {
         "title": "Rhythm Nation",
         "mood": "Energetic",
-        "mainInterest": "Dance"
+        "mainInterest": "Dance",
+        "imageUrl": "https://via.placeholder.com/300x200?text=Rhythm+Nation"
       },
       {
         "title": "Eco Warriors",
         "mood": "Determined",
-        "mainInterest": "Environmental Activism"
+        "mainInterest": "Environmental Activism",
+        "imageUrl": "https://via.placeholder.com/300x200?text=Eco+Warriors"
       },
       {
         "title": "Stargazers",
         "mood": "Curious",
-        "mainInterest": "Astronomy"
+        "mainInterest": "Astronomy",
+        "imageUrl": "https://via.placeholder.com/300x200?text=Stargazers"
       },
       {
         "title": "Shutter Bugs",
         "mood": "Observant",
-        "mainInterest": "Photography"
+        "mainInterest": "Photography",
+        "imageUrl": "https://via.placeholder.com/300x200?text=Shutter+Bugs"
       },
       {
         "title": "Vinyl Vibe",
         "mood": "Nostalgic",
-        "mainInterest": "Vintage Music"
+        "mainInterest": "Vintage Music",
+        "imageUrl": "https://via.placeholder.com/300x200?text=Vinyl+Vibe"
       },
       {
         "title": "Tech Titans",
         "mood": "Innovative",
-        "mainInterest": "Technology"
+        "mainInterest": "Technology",
+        "imageUrl": "https://via.placeholder.com/300x200?text=Tech+Titans"
       },
       {
         "title": "History Buffs",
         "mood": "Inquisitive",
-        "mainInterest": "Ancient Civilizations"
+        "mainInterest": "Ancient Civilizations",
+        "imageUrl": "https://via.placeholder.com/300x200?text=History+Buffs"
       }
     ]
   }
+  

@@ -25,9 +25,8 @@ const AppRoutes = () => {
 
   return (
     <Router>
-      <Layout>
       <Routes>
-        <Route path="/" element={<Navigate to="/signup" />} />
+      <Route path="/" element={<Navigate to="/signup" />} />
         <Route 
           path="/signup" 
           element={isAuthenticated ? <Navigate to="/question" /> : <SignUp onSignUp={handleLogin} />} 
@@ -40,6 +39,9 @@ const AppRoutes = () => {
           path="/question" 
           element={isAuthenticated ? <Question /> : <Navigate to="/signup" />} 
         />
+      </Routes>
+      <Layout>
+      <Routes>
         <Route 
           path='/home' 
           element={ <HomePage />} 
