@@ -87,7 +87,7 @@ const SideBar = () => {
               ))}
             </ul>
           </nav>
-          <div className="mt-auto">
+          <div className="mt-2">
             <button className="w-full bg-gradient-to-r from-emerald-500 to-turquoise-500 hover:from-turquoise-500 hover:to-emerald-500 text-white py-3 px-4 rounded-lg transition-all duration-300 font-bold text-lg transform hover:scale-105">
               Log Out
             </button>

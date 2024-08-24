@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
 
 import SignUp from './Pages/SignUp';
 import SignIn from './Pages/SignIn';
@@ -14,7 +14,6 @@ import PicDump from './Pages/PicDump';
 import Settings from './Pages/Settings';
 import Layout from './components/Layout';
 
-
 const AppRoutes = () => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated); // Use the isAuthenticated state from Redux
   const dispatch = useDispatch();
@@ -26,7 +25,8 @@ const AppRoutes = () => {
   return (
     <Router>
       <Routes>
-      <Route path="/" element={<Navigate to="/signup" />} />
+        {/* Routes without Layout */}
+        <Route path="/" element={<Navigate to="/signup" />} />
         <Route 
           path="/signup" 
           element={isAuthenticated ? <Navigate to="/question" /> : <SignUp onSignUp={handleLogin} />} 
@@ -39,20 +39,17 @@ const AppRoutes = () => {
           path="/question" 
           element={isAuthenticated ? <Question /> : <Navigate to="/signup" />} 
         />
+        
+        {/* Routes with Layout */}
+       
+             
+          <Route path="/home" element={<Layout><HomePage/></Layout>} />
+          <Route path="/community" element={<Layout><CommunityPage /></Layout>} />
+          <Route path="/mood" element={<Layout><Mood/></Layout>} />
+          <Route path="/picdump" element={<Layout><PicDump /></Layout>} />
+          <Route path="/settings" element={<Layout><Settings /></Layout>} />
+         
       </Routes>
-      <Layout>
-      <Routes>
-        <Route 
-          path='/home' 
-          element={ <HomePage />} 
-        />
-        <Route path='/community' element={<CommunityPage/>}/>
-        <Route path='/mood' element={<Mood/>}/>
-        <Route path ='/picdump' element={<PicDump/>}/>
-        <Route path='/settings' element={<Settings/>}/>
-        <Route/>
-      </Routes>
-      </Layout>
     </Router>
   );
 };

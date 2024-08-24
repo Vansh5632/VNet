@@ -51,11 +51,11 @@ const GroupCard = ({ title, mood, mainInterest, imageUrl }) => {
       <div className='p-6'>
         <div className='flex items-center justify-between mb-4'>
           <div className='text-sm text-gray-600 dark:text-gray-300'>
-            <span className='font-semibold text-gray-800 dark:text-gray-100'>Main Interest:</span> {mainInterest}
+            <span className='font-semibold text-gray-800 dark:text-gray-100'></span> {mainInterest}
           </div>
-          <div className='text-xs font-medium' style={{ color: randomColor3 }}>
+          {/* <div className='text-xs font-medium' style={{ color: randomColor3 }}>
             {mood}
-          </div>
+          </div> */}
         </div>
         <button
           className='w-full text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-opacity-50'
