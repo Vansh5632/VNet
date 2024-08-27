@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { SiGooglehome } from "react-icons/si";
 import { MdOutlineGroups } from "react-icons/md";
 import { IoSettings } from "react-icons/io5";
-import { BsEmojiSmile } from "react-icons/bs";
-import { BsImages } from 'react-icons/bs';
+import { BsEmojiSmile, BsImages } from 'react-icons/bs';
 import Logo from '../assets/logo.svg';
 
 const SideBar = () => {
   const [activeIcon, setActiveIcon] = useState("Home");
+  const navigate = useNavigate(); // Use the useNavigate hook
 
   const icons = [
     {
@@ -67,10 +67,12 @@ const SideBar = () => {
             <ul className="space-y-6">
               {icons.map((item) => (
                 <li key={item.name}>
-                  <Link
-                    to={item.route}
-                    onClick={() => setActiveIcon(item.name)}
-                    className={`w-full flex items-center p-4 rounded-lg transition-all duration-300 ${
+                  <div
+                    onClick={() => {
+                      setActiveIcon(item.name);
+                      navigate(item.route); // Use useNavigate to navigate
+                    }}
+                    className={`w-full flex items-center p-4 rounded-lg cursor-pointer transition-all duration-300 ${
                       activeIcon === item.name
                         ? `${item.activeBg} text-white shadow-lg transform scale-105`
                         : `text-gray-400`
@@ -82,7 +84,7 @@ const SideBar = () => {
                     <span className="text-lg font-semibold">
                       {item.name}
                     </span>
-                  </Link>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -101,10 +103,12 @@ const SideBar = () => {
           <ul className="flex justify-around items-center">
             {icons.map((item) => (
               <li key={item.name}>
-                <Link
-                  to={item.route}
-                  onClick={() => setActiveIcon(item.name)}
-                  className={`flex flex-col items-center p-2 rounded-lg transition-all duration-300 ${
+                <div
+                  onClick={() => {
+                    setActiveIcon(item.name);
+                    navigate(item.route); // Use useNavigate to navigate
+                  }}
+                  className={`flex flex-col items-center p-2 rounded-lg cursor-pointer transition-all duration-300 ${
                     activeIcon === item.name
                       ? `${item.activeBg} text-white`
                       : `hover:${item.hoverBg} hover:text-white`
@@ -116,14 +120,13 @@ const SideBar = () => {
                   <span className="text-xs mt-1">
                     {item.name}
                   </span>
-                </Link>
+                </div>
               </li>
             ))}
             {/* Logout button for mobile */}
             <li>
               <button className="flex flex-col items-center p-2 rounded-lg transition-all duration-300 bg-gradient-to-r from-emerald-500 to-turquoise-500 hover:from-turquoise-500 hover:to-emerald-500 text-white">
                 <span className="text-2xl">
-                  {/* This is a placeholder; replace with an actual logout icon if desired */}
                   <BsEmojiSmile />
                 </span>
                 <span className="text-xs mt-1">

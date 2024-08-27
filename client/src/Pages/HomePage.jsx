@@ -5,7 +5,7 @@ import InfiniteScroll from '../components/InfiniteScroll';
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col h-screen bg-gradient-to-r from-emerald-500 via-turquoise-500 to-sky-blue-500">
+    <div className="flex flex-col h-screen bg-slate-700">
       
       <div className="flex flex-1 overflow-hidden">
        

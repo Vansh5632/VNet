@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 // Expanded color palette
 const colors = [
