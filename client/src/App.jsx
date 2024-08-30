@@ -6,13 +6,13 @@ import SignUp from './Pages/SignUp';
 import SignIn from './Pages/SignIn';
 import Question from './Pages/Question';
 import HomePage from './Pages/HomePage';
-import BouncingDotLoader from './components/BouncingDotLoader';
+import BouncingDotLoader from './components/Main/BouncingDotLoader';
 import { login } from './store/authSlice'; 
 import CommunityPage from './Pages/CommunityPage';
 import Mood from './Pages/Mood';
 import PicDump from './Pages/PicDump';
 import Settings from './Pages/Settings';
-import Layout from './components/Layout';
+import Layout from './components/Main/Layout';
 
 const AppRoutes = () => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated); // Use the isAuthenticated state from Redux
@@ -33,11 +33,11 @@ const AppRoutes = () => {
         />
         <Route 
           path="/signin" 
-          element={isAuthenticated ? <Navigate to="/question" /> : <SignIn onSignIn={handleLogin} />} 
+          component={isAuthenticated ? <Navigate to="/question" /> : <SignIn onSignIn={handleLogin} />} 
         />
         <Route 
           path="/question" 
-          element={isAuthenticated ? <Question /> : <Navigate to="/signup" />} 
+          component={isAuthenticated ? <Question /> : <Navigate to="/signup" />} 
         />
         
         {/* Routes with Layout */}

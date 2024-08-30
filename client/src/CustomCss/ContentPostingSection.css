@@ -1,0 +1,31 @@
+.btn-sliding {
+    background-color: #2ecc71;
+    position: relative;
+    color: transparent;
+  }
+  
+  .sliding-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #27ae60;
+    animation: sliding-animation 2s ease-in-out infinite;
+  }
+  
+  @keyframes sliding-animation {
+    0% {
+      width: 0%;
+      left: 0;
+    }
+    50% {
+      width: 100%;
+      left: 0;
+    }
+    100% {
+      width: 0%;
+      left: 100%;
+    }
+  }
+  

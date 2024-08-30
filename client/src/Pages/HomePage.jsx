@@ -1,7 +1,7 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
-import SideBar from '../components/SideBar';
-import InfiniteScroll from '../components/InfiniteScroll';
+
+
+import SideBar from '../components/Main/SideBar';
+import InfiniteScroll from '../components/Main/InfiniteScroll';
 
 const HomePage = () => {
   return (
