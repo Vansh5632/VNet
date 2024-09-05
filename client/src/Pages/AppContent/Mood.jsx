@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { IoArrowBack } from 'react-icons/io5'; // For back arrow icon
-import ContentPostingSection from '../components/Mood/ContentPostingSection';
-import MoodPost from '../components/Mood/MoodPost';
-import "../CustomCss/mood.css"
+import ContentPostingSection from '../../components/Mood/ContentPostingSection';
+import MoodPost from '../../components/Mood/MoodPost';
+import "../../CustomCss/MoodAnimation.css"
 const Mood = () => {
   const [contentData, setContentData] = useState({
     title: '',

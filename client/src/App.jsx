@@ -4,15 +4,16 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import SignUp from './Pages/Logins/SignUp';
 import SignIn from './Pages/Logins/SignIn';
-import Question from './Pages/Question';
-import HomePage from './Pages/HomePage';
+import Question from './Pages/Logins/Question';
+import HomePage from './Pages/AppContent/HomePage';
 import BouncingDotLoader from './components/Main/BouncingDotLoader';
 import { login } from './store/authSlice'; 
-import CommunityPage from './Pages/CommunityPage';
-import Mood from './Pages/Mood';
-import PicDump from './Pages/PicDump';
-import Settings from './Pages/Settings';
+import CommunityPage from './Pages/AppContent/CommunityPage';
+import Mood from './Pages/AppContent/Mood';
+import PicDump from './Pages/AppContent/PicDump';
+import Settings from './Pages/Profile/Settings';
 import Layout from './components/Main/Layout';
+import SparkleEffect from './CustomCss/Sparkle';  // Import the Sparkle Effect
 
 const AppRoutes = () => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated); // Use the isAuthenticated state from Redux
@@ -33,22 +34,21 @@ const AppRoutes = () => {
         />
         <Route 
           path="/signin" 
-          component={isAuthenticated ? <Navigate to="/question" /> : <SignIn onSignIn={handleLogin} />} 
+          element={isAuthenticated ? <Navigate to="/question" /> : <SignIn onSignIn={handleLogin} />} 
         />
         <Route 
           path="/question" 
-          component={isAuthenticated ? <Question /> : <Navigate to="/signup" />} 
+          element={isAuthenticated ? <Question /> : <Navigate to="/signup" />} 
         />
         
         {/* Routes with Layout */}
-       
-             
-          <Route path="/home" element={<Layout><HomePage/></Layout>} />
-          <Route path="/community" element={<Layout><CommunityPage /></Layout>} />
-          <Route path="/mood" element={<Layout><Mood/></Layout>} />
-          <Route path="/picdump" element={<Layout><PicDump /></Layout>} />
-          <Route path="/settings" element={<Layout><Settings /></Layout>} />
-         
+        <Route path="/" element={<Layout />}>
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/community" element={<CommunityPage />} />
+          <Route path="/mood" element={<Mood />} />
+          <Route path="/picdump" element={<PicDump />} />
+          <Route path="/settings" element={<Settings />} />
+        </Route>
       </Routes>
     </Router>
   );
@@ -65,6 +65,7 @@ const App = () => {
 
   return (
     <div>
+      <SparkleEffect /> {/* Add Sparkle Effect to the background */}
       {loading ? <BouncingDotLoader /> : <AppRoutes />}
     </div>
   );
