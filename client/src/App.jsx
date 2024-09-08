@@ -13,7 +13,7 @@ import Mood from './Pages/AppContent/Mood';
 import PicDump from './Pages/AppContent/PicDump';
 import Settings from './Pages/Profile/Settings';
 import Layout from './components/Main/Layout';
-import SparkleEffect from './CustomCss/Sparkle';  // Import the Sparkle Effect
+// import SparkleEffect from './CustomCss/Sparkle';  // Import the Sparkle Effect
 
 const AppRoutes = () => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated); // Use the isAuthenticated state from Redux
@@ -65,7 +65,6 @@ const App = () => {
 
   return (
     <div>
-      <SparkleEffect /> {/* Add Sparkle Effect to the background */}
       {loading ? <BouncingDotLoader /> : <AppRoutes />}
     </div>
   );
