@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
-import SignUp from './Pages/Logins/SignUp';
-import SignIn from './Pages/Logins/SignIn';
-import Question from './Pages/Logins/Question';
-import HomePage from './Pages/AppContent/HomePage';
+import SignUp from './Pages/SignUp';
+import SignIn from './Pages/SignIn';
+import Question from './Pages/Question';
+import HomePage from './Pages/HomePage';
 import BouncingDotLoader from './components/Main/BouncingDotLoader';
 import { login } from './store/authSlice'; 
 import CommunityPage from './Pages/AppContent/CommunityPage';

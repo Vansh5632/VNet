@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";  // Import useNavigate
-import questionData from "../../data/questionData.json";
+import questionData from "../data/questionData.json";
 
 const questions = questionData.questions;
 
