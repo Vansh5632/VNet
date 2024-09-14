@@ -24,6 +24,10 @@ const Mood = () => {
     //for rendering previous posts from the backend server
   }
 
+  const handleback=()=>{
+    setIsCreatingPost(false);
+  }
+
   return (
     <div className={`relative bg-slate-700 min-h-screen ${isCreatingPost ? 'overflow-hidden' : ''}`}>
       <div className="absolute top-4 left-0 right-0 flex justify-center animate-pulse">
@@ -53,7 +57,7 @@ const Mood = () => {
       {isCreatingPost && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="bg-white p-6 w-1/3 rounded shadow-lg z-50">
-            <ContentPostingSection onSubmitContent={handleContentSubmit} />
+            <ContentPostingSection onSubmitContent={handleContentSubmit} onBack={handleback}/>
           </div>
           {/* Darken the background */}
           <div className="fixed inset-0 bg-black opacity-50 z-40"></div>

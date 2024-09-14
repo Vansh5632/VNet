@@ -1,7 +1,7 @@
 
 
-import SideBar from '../../components/Main/SideBar';
-import InfiniteScroll from '../../components/Main/InfiniteScroll';
+import SideBar from '../components/Main/SideBar';
+import InfiniteScroll from '../components/Main/InfiniteScroll';
 
 const HomePage = () => {
   return (
@@ -36,9 +36,7 @@ const HomePage = () => {
           <InfiniteScroll />
         </main>
       </div>
-      <div className="lg:hidden">
-        <SideBar />
-      </div>
+      
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
-import groups from '../../data/groups.json';
-import GroupCard from '../../components/Community/GroupCard';
+import groups from '../data/groups.json';
+import GroupCard from '../components/Community/GroupCard';
 
 const CommunityPage = () => {
   return (

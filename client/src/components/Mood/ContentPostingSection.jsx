@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../CustomCss/ContentPostingSection.css'; // Custom styles here
 
-const ContentPostingSection = ({ onSubmitContent }) => {
+const ContentPostingSection = ({ onSubmitContent, onBack }) => {
   const [title, setTitle] = useState('');
   const [mood, setMood] = useState('');
   const [content, setContent] = useState('');
@@ -23,9 +23,15 @@ const ContentPostingSection = ({ onSubmitContent }) => {
   };
 
   return (
-    <div className="w-full  mx-auto bg-gradient-to-b from-gray-800 to-gray-900 text-white p-8 rounded-lg shadow-xl transform transition-transform duration-300 hover:scale-105">
-      <div className="mb-6">
+    <div className="w-full mx-auto bg-gradient-to-b from-gray-800 to-gray-900 text-white p-8 rounded-lg shadow-xl transform transition-transform duration-300 hover:scale-105">
+      <div className="mb-6 flex justify-between items-center">
         <h2 className="text-3xl font-semibold text-blue-400 text-center">Create a Post</h2>
+        <button
+          onClick={onBack}
+          className="text-sm bg-red-500 text-white px-3 py-2 rounded-lg focus:outline-none hover:bg-red-600 transition-all duration-300"
+        >
+          Back
+        </button>
       </div>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="relative">

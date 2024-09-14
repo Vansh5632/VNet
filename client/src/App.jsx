@@ -7,20 +7,20 @@ import SignIn from './Pages/SignIn';
 import Question from './Pages/Question';
 import HomePage from './Pages/HomePage';
 import BouncingDotLoader from './components/Main/BouncingDotLoader';
-import { login } from './store/authSlice'; 
-import CommunityPage from './Pages/AppContent/CommunityPage';
-import Mood from './Pages/AppContent/Mood';
-import PicDump from './Pages/AppContent/PicDump';
-import Settings from './Pages/Profile/Settings';
+import { login } from './store/authSlice';
+
+import CommunityPage from './Pages/CommunityPage';
+import Mood from './Pages/Mood';
+import PicDump from './Pages/PicDump';
+import Settings from './Pages/Settings';
 import Layout from './components/Main/Layout';
-// import SparkleEffect from './CustomCss/Sparkle';  // Import the Sparkle Effect
 
 const AppRoutes = () => {
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated); // Use the isAuthenticated state from Redux
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const dispatch = useDispatch();
 
   const handleLogin = () => {
-    dispatch(login()); // Dispatch login action to update the auth state
+    dispatch(login());
   };
 
   return (
@@ -28,21 +28,21 @@ const AppRoutes = () => {
       <Routes>
         {/* Routes without Layout */}
         <Route path="/" element={<Navigate to="/signup" />} />
-        <Route 
-          path="/signup" 
-          element={isAuthenticated ? <Navigate to="/question" /> : <SignUp onSignUp={handleLogin} />} 
+        <Route
+          path="/signup"
+          element={isAuthenticated ? <Navigate to="/question" /> : <SignUp onSignUp={handleLogin} />}
         />
-        <Route 
-          path="/signin" 
-          element={isAuthenticated ? <Navigate to="/question" /> : <SignIn onSignIn={handleLogin} />} 
+        <Route
+          path="/signin"
+          element={isAuthenticated ? <Navigate to="/question" /> : <SignIn onSignIn={handleLogin} />}
         />
-        <Route 
-          path="/question" 
-          element={isAuthenticated ? <Question /> : <Navigate to="/signup" />} 
+        <Route
+          path="/question"
+          element={isAuthenticated ? <Question /> : <Navigate to="/signup" />}
         />
-        
+
         {/* Routes with Layout */}
-        <Route path="/" element={<Layout />}>
+        <Route element={<Layout />}>
           <Route path="/home" element={<HomePage />} />
           <Route path="/community" element={<CommunityPage />} />
           <Route path="/mood" element={<Mood />} />
@@ -60,7 +60,7 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000); // Simulate loading for 3 seconds
+    }, 3000);
   }, []);
 
   return (
