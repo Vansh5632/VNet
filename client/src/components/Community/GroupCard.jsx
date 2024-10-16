@@ -1,3 +1,6 @@
+import {useNavigate} from 'react-router-dom';
+
+
 const colors = [
   '#2ECC71', // Emerald Green
   '#1ABC9C', // Turquoise
@@ -15,8 +18,15 @@ const getRandomColor = () => {
   return colors[Math.floor(Math.random() * colors.length)];
 };
 
-const GroupCard = ({ title, mood, mainInterest, imageUrl }) => {
+
+
+const GroupCard = ({id, title, mood, mainInterest, imageUrl }) => {
   const randomColor = getRandomColor();
+  const navigate = useNavigate();
+
+  const handleJoinGroup = ()=>{
+    navigate(`/groupview`,{state: {id}});
+  }
 
   return (
     <div
@@ -52,7 +62,7 @@ const GroupCard = ({ title, mood, mainInterest, imageUrl }) => {
         <button
           className='w-full text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-opacity-50'
           style={{ backgroundColor: randomColor }}
-        >
+        onClick={handleJoinGroup}>
           Join Group
         </button>
       </div>

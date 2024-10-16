@@ -14,10 +14,13 @@ import Mood from './Pages/Mood';
 import PicDump from './Pages/PicDump';
 import Settings from './Pages/Settings';
 import Layout from './components/Main/Layout';
+import GroupView from './Pages/GroupView';
+import data from './data/groups.json'
 
 const AppRoutes = () => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const dispatch = useDispatch();
+  const id = data.id;
 
   const handleLogin = () => {
     dispatch(login());
@@ -48,6 +51,7 @@ const AppRoutes = () => {
           <Route path="/mood" element={<Mood />} />
           <Route path="/picdump" element={<PicDump />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path='/groupview' element = {<GroupView/>}/>
         </Route>
       </Routes>
     </Router>

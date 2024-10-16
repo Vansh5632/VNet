@@ -9,6 +9,7 @@ const CommunityPage = () => {
         {groups.groups.map((group, index) => (
           <div key={index}>
             <GroupCard 
+              id = {group.id}
               title={group.title} 
               mood={group.mood} 
               mainInterest={group.mainInterest} 
