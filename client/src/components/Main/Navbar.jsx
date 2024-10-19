@@ -1,13 +1,19 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { FaSearch, FaUserCircle, FaEnvelope, FaBell, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleSearch = () => {
     console.log("Searching for:", searchTerm);
+  };
+
+  const handleProfileClick = () => {
+    navigate('/profile');
   };
 
   return (
@@ -57,16 +63,16 @@ const Navbar = () => {
         <div className={`flex items-center space-x-4 transition-all duration-500 ease-in-out transform ${isSearchOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}`}>
           <IconButton icon={FaEnvelope} notificationCount={3} />
           <IconButton icon={FaBell} notificationCount={5} />
-          <IconButton icon={FaUserCircle} />
+          <IconButton icon={FaUserCircle} onClick={handleProfileClick} /> {/* Pass onClick */}
         </div>
       </div>
     </div>
   );
 };
 
-const IconButton = ({ icon: Icon, notificationCount }) => {
+const IconButton = ({ icon: Icon, notificationCount, onClick }) => {
   return (
-    <div className="relative group">
+    <div className="relative group" onClick={onClick}> {/* onClick added */}
       <div className="bg-gray-800 p-2 rounded-full shadow-md transition-all duration-500 ease-in-out transform group-hover:bg-emerald-500 group-hover:scale-125 group-hover:shadow-xl group-hover:-rotate-12">
         <Icon
           size={24}

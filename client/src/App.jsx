@@ -16,6 +16,7 @@ import Settings from './Pages/Settings';
 import Layout from './components/Main/Layout';
 import GroupView from './Pages/GroupView';
 import data from './data/groups.json'
+import ProfileCard from './components/NavbarThings/profilecard';
 
 const AppRoutes = () => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
@@ -52,7 +53,10 @@ const AppRoutes = () => {
           <Route path="/picdump" element={<PicDump />} />
           <Route path="/settings" element={<Settings />} />
           <Route path='/groupview' element = {<GroupView/>}/>
+          <Route path='/profile' element={<ProfileCard/>}/>
         </Route>
+        
+        
       </Routes>
     </Router>
   );
