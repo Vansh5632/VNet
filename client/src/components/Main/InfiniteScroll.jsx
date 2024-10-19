@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { AiOutlineHeart, AiOutlineShareAlt, AiOutlineDownload } from 'react-icons/ai';
 
 const InfiniteScroll = () => {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [page, setPage] = useState(1);
+  const [liked, setLiked] = useState([]); // Track likes per image
   const loader = useRef(null);
 
   useEffect(() => {
@@ -27,12 +28,12 @@ const InfiniteScroll = () => {
         observer.unobserve(loader.current);
       }
     };
-  }, []);
+  }, [images]);
 
   const handleObserver = (entities) => {
     const target = entities[0];
     if (target.isIntersecting) {
-      setPage((prev) => prev + 1);
+      loadMoreImages();
     }
   };
 
@@ -41,20 +42,26 @@ const InfiniteScroll = () => {
     const newImages = Array.from({ length: 10 }, (_, index) => ({
       id: images.length + index + 1,
       url: `https://picsum.photos/500/300?random=${images.length + index + 1}`,
-      description: `Random Image ${images.length + index + 1}`,
+      username: `User ${images.length + index + 1}`, // Add username
       likes: 0,
     }));
 
     setTimeout(() => {
       setImages((prev) => [...prev, ...newImages]);
+      setLiked((prev) => [...prev, ...Array(newImages.length).fill(false)]); // Initialize liked state
       setLoading(false);
     }, 1000);
   };
 
   const increaseLikes = (index) => {
-    const updatedImages = [...images];
-    updatedImages[index].likes += 1;
-    setImages(updatedImages);
+    if (!liked[index]) {
+      const updatedImages = [...images];
+      updatedImages[index].likes += 1;
+      setImages(updatedImages);
+      const updatedLiked = [...liked];
+      updatedLiked[index] = true; // Mark this image as liked
+      setLiked(updatedLiked);
+    }
   };
 
   return (
@@ -67,32 +74,20 @@ const InfiniteScroll = () => {
           >
             <img 
               src={image.url} 
-              alt={image.description} 
+              alt={`Image ${image.id}`} 
               className="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-t-lg sm:rounded-t-xl lg:rounded-t-2xl" 
               loading="lazy"
             />
             <div className="p-3 sm:p-4 rounded-b-lg sm:rounded-b-xl lg:rounded-b-2xl bg-gradient-to-r from-emerald-600 to-turquoise-600">
-              <p className="text-white text-sm sm:text-base font-semibold truncate">{image.description}</p>
+              <p className="text-white text-sm sm:text-base font-semibold">{image.username}</p> {/* Display Username */}
               <div className="flex justify-around mt-3 space-x-4">
                 {/* Like Button */}
                 <button
-                  className="flex items-center justify-center text-white hover:text-pink-400 transform transition-all duration-300 ease-in-out hover:scale-110"
+                  className={`flex items-center justify-center text-white ${liked[index] ? 'text-pink-400' : 'hover:text-pink-400'} transform transition-all duration-300 ease-in-out hover:scale-110`}
                   onClick={() => increaseLikes(index)}
+                  disabled={liked[index]} // Disable if already liked
                 >
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 15l7-7 7 7"
-                    ></path>
-                  </svg>
+                  <AiOutlineHeart className="w-6 h-6" />
                   <span className="ml-1">Like</span>
                   <span className="ml-2 text-sm">{image.likes}</span>
                 </button>
@@ -102,20 +97,7 @@ const InfiniteScroll = () => {
                   className="flex items-center justify-center text-white hover:text-blue-400 transform transition-all duration-300 ease-in-out hover:scale-110"
                   onClick={() => console.log(`Shared: ${image.url}`)}
                 >
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 12v.01M12 20l9-8-9-8M4 12h8.01"
-                    ></path>
-                  </svg>
+                  <AiOutlineShareAlt className="w-6 h-6" />
                   <span className="ml-1">Share</span>
                 </button>
 
@@ -124,20 +106,7 @@ const InfiniteScroll = () => {
                   className="flex items-center justify-center text-white hover:text-green-400 transform transition-all duration-300 ease-in-out hover:scale-110"
                   onClick={() => window.open(image.url, '_blank')}
                 >
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M4 12l4 4m0 0l4-4m-4 4V4"
-                    ></path>
-                  </svg>
+                  <AiOutlineDownload className="w-6 h-6" />
                   <span className="ml-1">Download</span>
                 </button>
               </div>
