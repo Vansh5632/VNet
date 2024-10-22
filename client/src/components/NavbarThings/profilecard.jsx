@@ -7,6 +7,10 @@ const ProfileCard = () => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
+  const handleGroupBtn=()=>{
+    navigate('/joinedgrps')
+  }
+
   useEffect(() => {
     const fetchUserData = async () => {
       setLoading(true);
@@ -118,7 +122,7 @@ const ProfileCard = () => {
           <div className="flex justify-around mt-6">
             <button
               className="bg-blue-500 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-600"
-              onClick={() => console.log('Navigate to Groups Joined')}
+              onClick={handleGroupBtn}
             >
               <Users size={16} />
               Groups

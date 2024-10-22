@@ -17,6 +17,7 @@ import Layout from './components/Main/Layout';
 import GroupView from './Pages/GroupView';
 import data from './data/groups.json'
 import ProfileCard from './components/NavbarThings/profilecard';
+import GroupsJoined from './components/NavbarThings/groupjoined';
 
 const AppRoutes = () => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
@@ -54,6 +55,7 @@ const AppRoutes = () => {
           <Route path="/settings" element={<Settings />} />
           <Route path='/groupview' element = {<GroupView/>}/>
           <Route path='/profile' element={<ProfileCard/>}/>
+          <Route path='/joinedgroups' element={<GroupsJoined/>}/>
         </Route>
         
         
