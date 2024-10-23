@@ -8,7 +8,7 @@ const ProfileCard = () => {
   const navigate = useNavigate();
 
   const handleGroupBtn=()=>{
-    navigate('/joinedgrps')
+    navigate('/joinedgroups')
   }
 
   useEffect(() => {

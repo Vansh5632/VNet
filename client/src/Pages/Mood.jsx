@@ -24,7 +24,7 @@ const Mood = () => {
   };
 
   return (
-    <div className={`relative bg-slate-700 min-h-screen ${isCreatingPost ? 'overflow-hidden' : ''}`}>
+    <div className={`relative bg-gradient-to-br from-[#A7E6D9] via-[#A3D9A1] to-[#B2E0F8] min-h-screen ${isCreatingPost ? 'overflow-hidden' : ''}`}>
       {/* Warning Banner */}
       <div className="absolute top-4 left-0 right-0 flex justify-center animate-pulse px-4">
         <h1 className="text-yellow-400 text-xl md:text-3xl font-bold text-center">

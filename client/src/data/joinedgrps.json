@@ -1,0 +1,12 @@
+[
+    { "id": 1, "name": "Web Developers", "description": "A group for web enthusiasts" },
+    { "id": 2, "name": "AI/ML Enthusiasts", "description": "Exploring the world of machine learning" },
+    { "id": 3, "name": "Tech Innovators", "description": "Discuss latest trends in technology" },
+    { "id": 4, "name": "Data Scientists", "description": "Analyzing data for insights" },
+    { "id": 5, "name": "Cloud Engineers", "description": "Building scalable cloud solutions" },
+    { "id": 6, "name": "Cybersecurity Experts", "description": "Protecting systems and data" },
+    { "id": 7, "name": "Mobile Developers", "description": "Creating mobile applications" },
+    { "id": 8, "name": "Game Developers", "description": "Designing and developing games" },
+    { "id": 9, "name": "DevOps Engineers", "description": "Streamlining development and operations" },
+    { "id": 10, "name": "UI/UX Designers", "description": "Designing user-friendly interfaces" }
+]

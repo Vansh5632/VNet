@@ -13,7 +13,7 @@ const Settings = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-[#A7E6D9] via-[#A3D9A1] to-[#B2E0F8] p-6">
       <div className="max-w-2xl mx-auto bg-white shadow-md rounded-lg overflow-hidden">
         <div className="px-6 py-4 bg-gray-50 border-b border-gray-200">
           <h1 className="text-2xl font-bold text-gray-800">Settings</h1>
