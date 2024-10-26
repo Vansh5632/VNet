@@ -1,0 +1,53 @@
+{
+  "notifications": [
+    {
+      "id": 1,
+      "type": "message",
+      "user": "Sarah Chen",
+      "action": "sent you a message",
+      "time": "2 min ago",
+      "read": false,
+      "avatar": null,
+      "content": "Hey! I checked out your latest project..."
+    },
+    {
+      "id": 2,
+      "type": "like",
+      "user": "Mike Peterson",
+      "action": "liked your post",
+      "time": "1 hour ago",
+      "read": false,
+      "avatar": null,
+      "content": "Getting started with React and TailwindCSS"
+    },
+    {
+      "id": 3,
+      "type": "follow",
+      "user": "Emma Watson",
+      "action": "started following you",
+      "time": "3 hours ago",
+      "read": true,
+      "avatar": null
+    },
+    {
+      "id": 4,
+      "type": "mention",
+      "user": "John Doe",
+      "action": "mentioned you in a comment",
+      "time": "5 hours ago",
+      "read": true,
+      "avatar": null,
+      "content": "Great insights from @you on the latest tech trends!"
+    },
+    {
+      "id": 5,
+      "type": "star",
+      "user": "Alex Johnson",
+      "action": "starred your repository",
+      "time": "1 day ago",
+      "read": true,
+      "avatar": null,
+      "content": "awesome-react-components"
+    }
+  ]
+}

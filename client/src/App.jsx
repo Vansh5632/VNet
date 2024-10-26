@@ -18,7 +18,7 @@ import GroupView from './Pages/GroupView';
 import data from './data/groups.json'
 import ProfileCard from './components/NavbarThings/profilecard';
 import GroupsJoined from './components/NavbarThings/groupjoined';
-import Notifications from './components/NavbarThings/Notifications';
+import Notifications from './components/NavbarThings/notifications/Notification';
 
 const AppRoutes = () => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
