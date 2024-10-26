@@ -15,7 +15,12 @@ const Navbar = () => {
   const handleProfileClick = () => {
     navigate('/profile');
   };
-
+  const handleGrpClick = () => {
+    navigate('/joinedgroups');
+  }
+  const handleNotifications = () => {
+    navigate('/notifications');
+  }
   return (
     <div className="bg-gray-800 p-4">
       <div className="flex items-center justify-between bg-gradient-to-r from-emerald-500 to-turquoise-500 w-full max-w-6xl mx-auto p-3 rounded-lg shadow-lg transition-all duration-500 ease-in-out hover:shadow-2xl">
@@ -61,8 +66,8 @@ const Navbar = () => {
 
         {/* User Icons */}
         <div className={`flex items-center space-x-4 transition-all duration-500 ease-in-out transform ${isSearchOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}`}>
-          <IconButton icon={FaEnvelope} notificationCount={3} />
-          <IconButton icon={FaBell} notificationCount={5} />
+          <IconButton icon={FaEnvelope} notificationCount={3} onClick={handleGrpClick}/>
+          <IconButton icon={FaBell} notificationCount={5} onClick={handleNotifications}/>
           <IconButton icon={FaUserCircle} onClick={handleProfileClick} /> {/* Pass onClick */}
         </div>
       </div>
