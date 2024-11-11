@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import blackimage from '../assets/photo-1550684376-efcbd6e3f031.jpeg';
+import logo from '../assets/logo.svg'; // Make sure the path to your SVG logo is correct
 
-const SignUp = ({ onSignUp }) => {  // Receive the onSignUp prop from AppRoutes
+const SignUp = ({ onSignUp }) => {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -28,14 +30,24 @@ const SignUp = ({ onSignUp }) => {  // Receive the onSignUp prop from AppRoutes
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-emerald-600 via-turquoise to-sky-600">
       <div className="bg-white flex rounded-lg shadow-lg overflow-hidden w-full max-w-4xl mx-4 sm:mx-0">
-        {/* Image Section */}
-        <div className="hidden sm:block w-1/2">
+        {/* Image Section with Overlayed Logo */}
+        <div className="relative hidden sm:flex w-1/2">
+          {/* SVG Logo above the image */}
+          <div className="absolute inset-0 flex justify-center items-center z-10">
+            <img
+              src={logo}
+              alt="Logo"
+              className="w-36 h-36" // Adjust size as needed
+            />
+          </div>
+          {/* Background Image */}
           <img
-            src="https://images.unsplash.com/photo-1550684376-efcbd6e3f031"
+            src={blackimage}
             alt="Sign Up"
-            className="object-cover h-full"
+            className="object-cover h-full w-full"
           />
         </div>
+
         {/* Form Section */}
         <div className="w-full sm:w-1/2 p-8">
           <h2 className="text-2xl font-bold text-purple-600 text-center mb-6">Join Us Today</h2>
@@ -88,7 +100,12 @@ const SignUp = ({ onSignUp }) => {  // Receive the onSignUp prop from AppRoutes
             >
               Let's Begin
             </button>
-            <h1 className='mt-2'>Already have an account? <Link to="/signin" className='text-blue-500'>Sign In</Link></h1>
+            <h1 className="mt-2">
+              Already have an account?{' '}
+              <Link to="/signin" className="text-blue-500">
+                Sign In
+              </Link>
+            </h1>
           </form>
         </div>
       </div>
