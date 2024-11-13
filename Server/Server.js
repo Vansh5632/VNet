@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const posts = require('./routes/posts')
 dotenv.config();
 
 const app = express();
@@ -23,7 +22,6 @@ app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use('/api/auth',router);
 app.use('/api/questions',questionRoute);
-app.use('/api/posts',posts);
 
 connectDB();
 const PORT = process.env.PORT||5000;
