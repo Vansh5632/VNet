@@ -13,4 +13,6 @@ const addcomment = async (req, res) => {
         post.comments.push(newComment._id);
         await post.save();
         res.status(201).json(newComment);
+    }catch(err){
+        res.status(500).json({error:err.message});
     }
