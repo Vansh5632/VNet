@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "url": "/api/placeholder/400/600",
+        "title": "Mountain Sunrise",
+        "description": "Beautiful sunrise captured in the mountains",
+        "category": "Nature",
+        "likes": "2.4k",
+        "comments": "88",
+        "date": "2 hours ago"
+    },
+    {
+        "id": 2,
+        "url": "/api/placeholder/400/600",
+        "title": "Urban Architecture",
+        "description": "Modern architectural marvel in the city center",
+        "category": "Architecture",
+        "likes": "1.8k",
+        "comments": "65",
+        "date": "4 hours ago"
+    },
+
+{
+    "id": 3,
+    "url": "/api/placeholder/400/600",
+    "title": "Forest Trail",
+    "description": "A serene trail through the forest",
+    "category": "Nature",
+    "likes": "3.1k",
+    "comments": "120",
+    "date": "1 day ago"
+},
+{
+    "id": 4,
+    "url": "/api/placeholder/400/600",
+    "title": "City Skyline",
+    "description": "The city skyline at dusk",
+    "category": "Urban",
+    "likes": "2.9k",
+    "comments": "150",
+    "date": "3 days ago"
+},
+{
+    "id": 5,
+    "url": "/api/placeholder/400/600",
+    "title": "Desert Dunes",
+    "description": "Golden sand dunes in the desert",
+    "category": "Nature",
+    "likes": "1.5k",
+    "comments": "45",
+    "date": "5 days ago"
+},
+{
+    "id": 6,
+    "url": "/api/placeholder/400/600",
+    "title": "Snowy Mountains",
+    "description": "Snow-covered mountains under a clear blue sky",
+    "category": "Nature",
+    "likes": "2.7k",
+    "comments": "98",
+    "date": "1 week ago"
+},
+{
+    "id": 7,
+    "url": "/api/placeholder/400/600",
+    "title": "Historic Castle",
+    "description": "A historic castle with a rich history",
+    "category": "Architecture",
+    "likes": "3.3k",
+    "comments": "200",
+    "date": "2 weeks ago"
+},
+{
+    "id": 8,
+    "url": "/api/placeholder/400/600",
+    "title": "Ocean Waves",
+    "description": "Waves crashing on the shore at sunset",
+    "category": "Nature",
+    "likes": "4.1k",
+    "comments": "250",
+    "date": "3 weeks ago"
+},
+{
+    "id": 9,
+    "url": "/api/placeholder/400/600",
+    "title": "City Park",
+    "description": "A peaceful park in the middle of the city",
+    "category": "Urban",
+    "likes": "2.2k",
+    "comments": "80",
+    "date": "1 month ago"
+},
+{
+    "id": 10,
+    "url": "/api/placeholder/400/600",
+    "title": "Mountain Lake",
+    "description": "A tranquil lake surrounded by mountains",
+    "category": "Nature",
+    "likes": "3.8k",
+    "comments": "170",
+    "date": "2 months ago"
+},
+{
+    "id": 11,
+    "url": "/api/placeholder/400/600",
+    "title": "Modern Bridge",
+    "description": "A modern bridge spanning a river",
+    "category": "Architecture",
+    "likes": "2.5k",
+    "comments": "110",
+    "date": "3 months ago"
+},
+{
+    "id": 12,
+    "url": "/api/placeholder/400/600",
+    "title": "Countryside Road",
+    "description": "A winding road through the countryside",
+    "category": "Nature",
+    "likes": "1.9k",
+    "comments": "60",
+    "date": "4 months ago"
+}]

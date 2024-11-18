@@ -68,9 +68,9 @@ const Settings = () => {
   return (
     <div className="min-h-screen bg-gray-900">
       <div className="max-w-6xl mx-auto px-4 py-8">
-        <div className="flex gap-8">
+        <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar */}
-          <div className="w-64 flex-shrink-0">
+          <div className="w-full lg:w-64 flex-shrink-0">
             <div className="bg-gray-800 rounded-xl p-4">
               <h2 className="text-white font-semibold px-4 mb-4">Settings</h2>
               <nav className="space-y-1">
